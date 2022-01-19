@@ -8,7 +8,7 @@ https://github.com/yahyam1234/Project1Elk/blob/main/Diagrams/ELK%20UPDATE.drawio
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
- https://github.com/dknicholson1990/ELK-Stack-Project-1/blob/main/Ansible/ansible%20playbook.txt
+ https://github.com/yahyam1234/Project1Elk/blob/main/Ansible/ansible%20playbook.txt
 
 This document contains the following details:
 - Description of the Topologu
