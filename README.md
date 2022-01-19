@@ -24,12 +24,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_  Load balancers protect the servers from a denial of service attack.
-- using a jump box protects your virtual machines from public exposure
+- Load balancers protect the servers from a denial of service attack.
+- A jump box protects your virtual machines from public exposure
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_ Logfiles
-- _TODO: What does Metricbeat record?_ Activity Metrics
+- Filebeat watches for Logfiles
+- Metricbeat records Activity Metrics
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -94,9 +94,8 @@ SSH into the control node and follow the steps below:
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_ The playbook files are always in .yml format. and you can copy form the host machine to the virtual machine.
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ You will need to makesure in the .yml file you have the machine specified in the HOSTS section. You will make a seperate playbook and specify the hosts machine.
+- The playbook files are always in .yml format. and you can copy form the host machine to the virtual machine.
+- You will need to makesure in the .yml file you have the machine specified in the HOSTS section. You will make a seperate playbook and specify the hosts machine.
 - _Which URL do you navigate to in order to check that the ELK server is running? http://[your.VM.IP]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
