@@ -98,15 +98,10 @@ SSH into the control node and follow the steps below:
 - Update the configuration file to include webservers and elkvm
 - Run the playbook, and navigate to ElkVM to verify installation.
 
-Which file is the playbook? Where do you copy it? The playbook files are always in .yml format. and you can copy form the host machine to the virtual machine.
-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? You will need to makesure in the .yml file you have the machine specified in the HOSTS section. You will make a seperate playbook and specify the hosts machine.
+Which file is the playbook? Where do you copy it? 
+The playbook files are always in .yml format. and you can copy form the host machine to the virtual machine.
+Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+Verify you are in the .yml file also make sure the machine is chosen in the HOSTS section. You will make a seperate playbook and specify the hosts machine.
 _Which URL do you navigate to in order to check that the ELK server is running? http://[your.VM.IP]:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-ssh jumpbox@ ip address
-start and attach container
-curl (git clone location of updated files)
-cd /etc/ansible
-nano hosts (add vms ip to webserver and new section ELK for elk vm)
-nano ansible.conf to add the remote user to server
-   
+
