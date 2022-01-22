@@ -23,23 +23,28 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- Load balancers protect the servers from a denial of service attack.
+Load balancing ensures that the application will be highly efficient, in addition to restricting traffic to the network.
+What aspect of security do load balancers protect?
+- Load balancers protect the servers from a denial of service attack. In CIA triad it is availibilty category
+What is the advantage of a jump box?
+-All access comes from a single secure node
 - A jump box protects your virtual machines from public exposure
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- Filebeat watches for Logfiles
-- Metricbeat records Activity Metrics
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+What does Filebeat watch for?
+- Filebeat watches for Logfiles and anything thing in the system that has changed
+What does Metricbeat record?
+- Metricbeat records Activity Metrics and statistical data
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web-1    | DVWA/Beat| 10.0.0.5   | Linux            |
-| Web-2    | DVWA/Beat| 10.0.0.6   | Linux            |
-| ELK      | Monitor  | 10.1.0.4   | Linux            |
+| Web-1    | Server   | 10.0.0.5   | Linux            |
+| Web-2    | Server   | 10.0.0.6   | Linux            |
+| ELK      |Elk Server| 10.1.0.4   | Linux            |
 
 ### Access Policies
 
@@ -90,9 +95,9 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the playbook file to /etc/ansible.
+- Update the configuration file to include webservers and elkvm
+- Run the playbook, and navigate to ElkVM to check that the installation worked as expected.
 
 - The playbook files are always in .yml format. and you can copy form the host machine to the virtual machine.
 - You will need to makesure in the .yml file you have the machine specified in the HOSTS section. You will make a seperate playbook and specify the hosts machine.
